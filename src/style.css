@@ -243,3 +243,15 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opac
 .footer-note{color:#958575}.footer-links{color:#766557}.footer-links a:hover{color:#a87353}
 .desktop-nav.open{background:#f5efe5}
 @media(max-width:700px){.desktop-nav{background:#f5efe5}.manifesto-image-shade{background:linear-gradient(0deg,#e9dfd1,transparent 45%)}.hero{background:radial-gradient(ellipse at 80% 35%,rgba(211,190,163,.22),transparent 48%)}}
+
+
+/* Cream-toned sculptural objects for the ambient 3D scene */
+.ambient-3d:before{background:radial-gradient(ellipse at 18% 24%,rgba(220,195,163,.32),transparent 30%),radial-gradient(ellipse at 82% 66%,rgba(194,171,139,.22),transparent 28%),radial-gradient(ellipse at 48% 100%,rgba(240,224,202,.42),transparent 34%)}
+.orb-pearl{background:radial-gradient(circle at 28% 24%,#fffef8 0 3%,#f4e8d5 12%,#d7c0a1 35%,#a88d6d 63%,#65513e 86%);box-shadow:inset -24px -25px 45px #604b36, inset 12px 10px 24px #fff9,0 25px 80px rgba(145,111,76,.22)}
+.orb-coral{background:radial-gradient(circle at 28% 25%,#fffaf0,#f1dfc6 13%,#d5b18a 38%,#a77e59 70%,#5f4837 88%);box-shadow:inset -17px -20px 30px #63472f,0 20px 65px rgba(153,111,70,.2)}
+.orb-cyan{background:radial-gradient(circle at 28% 24%,#fffdf3,#eee3cf 14%,#c9b596 43%,#938067 76%,#5b4c3b);box-shadow:inset -14px -16px 25px #594833,0 18px 55px rgba(133,111,79,.18)}
+.ambient-ring{border-color:rgba(155,120,82,.32);box-shadow:0 0 25px rgba(175,140,101,.09),inset 0 0 20px rgba(255,255,255,.16)}
+.ring-small{border-color:rgba(183,148,108,.34)}
+.ambient-cube i{border-color:rgba(166,128,91,.55);background:linear-gradient(135deg,rgba(255,251,241,.32),rgba(193,164,127,.12));box-shadow:inset 0 0 25px rgba(255,255,255,.18)}
+.ambient-diamond{border-color:rgba(166,125,85,.55);background:linear-gradient(135deg,rgba(255,250,238,.5),rgba(199,171,137,.2));box-shadow:0 0 35px rgba(175,137,96,.14),inset 0 0 25px rgba(255,255,255,.25)}
+.ambient-star{color:rgba(169,123,82,.5);text-shadow:0 0 35px rgba(177,136,95,.2)}
