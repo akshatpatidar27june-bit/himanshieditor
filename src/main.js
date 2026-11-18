@@ -44,3 +44,25 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     card.addEventListener('pointerleave', () => { card.style.transform = ''; });
   });
 }
+
+
+// Subtle layered depth on the hero artwork; disabled for touch and reduced-motion users.
+const heroArt = document.querySelector('.hero-art');
+if (heroArt && window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroArt.addEventListener('pointermove', (event) => {
+    const rect = heroArt.getBoundingClientRect();
+    const px = (event.clientX - rect.left) / rect.width - .5;
+    const py = (event.clientY - rect.top) / rect.height - .5;
+    const frame = heroArt.querySelector('.frame-front');
+    const back = heroArt.querySelector('.frame-back');
+    if (frame) frame.style.transform = `rotateY(${px * 7}deg) rotateX(${-py * 6}deg) rotateZ(-3deg) translateZ(30px)`;
+    if (back) back.style.transform = `translate(${32 + px * -12}px,${-10 + py * -10}px) rotate(${7 + px * 3}deg) translateZ(-25px)`;
+  });
+  heroArt.addEventListener('pointerleave', () => {
+    const frame = heroArt.querySelector('.frame-front');
+    const back = heroArt.querySelector('.frame-back');
+    if (frame) frame.style.transform = '';
+    if (back) back.style.transform = '';
+  });
+}
